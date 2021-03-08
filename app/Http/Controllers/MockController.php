@@ -31,9 +31,8 @@ class MockController extends Controller
         }
 
         return response()->json([
-            'status' => true,
-            'expire-date' => Carbon::now()->add(1, 'day')->format("Y-d-m H:i:s"),
-            'receipt' => $my_status
+            'status' => $my_status,
+            'expire-date' => Carbon::now()->add(1, 'day')->format("Y-d-m H:i:s")
         ]);
     }
 }
